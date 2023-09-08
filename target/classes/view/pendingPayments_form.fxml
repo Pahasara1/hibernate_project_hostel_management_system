@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancPanePendingPayments" prefHeight="633.0" prefWidth="1150.0" styleClass="gradient-anchorpane" stylesheets="@../assets/styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel_management_hibernate.controller.PendingPaymentsFormController">
+   <children>
+      <TableView fx:id="tableStudentKeyMoney" focusTraversable="false" layoutX="57.0" layoutY="245.0" onMouseClicked="#tablePendingPayOnMouseClicked" opacity="0.9" prefHeight="323.0" prefWidth="1036.0">
+         <columns>
+            <TableColumn fx:id="colResId" prefWidth="114.0" text="reservation id" />
+            <TableColumn fx:id="colStId" prefWidth="118.0" text="student id" />
+            <TableColumn fx:id="colName" prefWidth="261.0" text="student name" />
+            <TableColumn fx:id="colAddress" prefWidth="158.0" text="address" />
+            <TableColumn fx:id="colContacts" prefWidth="135.0" text="contact" />
+            <TableColumn fx:id="colResDate" prefWidth="144.0" text="reservation date" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="102.0" text="key money" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Label alignment="CENTER" layoutX="387.0" layoutY="36.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.8" prefHeight="55.0" prefWidth="376.0" text="Pending Payments" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="140.0" prefHeight="20.0" prefWidth="106.0" text="Reservation id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReservationId" layoutX="235.0" layoutY="136.0" prefHeight="29.0" prefWidth="152.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="186.0" prefHeight="20.0" prefWidth="106.0" text="Student id       :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentId" layoutX="235.0" layoutY="182.0" prefHeight="29.0" prefWidth="152.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="140.0" prefHeight="20.0" prefWidth="95.0" text="Name            :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentName" layoutX="547.0" layoutY="136.0" prefHeight="29.0" prefWidth="152.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="186.0" prefHeight="20.0" prefWidth="95.0" text="Key Money   :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblKeyMoney" layoutX="547.0" layoutY="182.0" prefHeight="29.0" prefWidth="152.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="763.0" layoutY="126.0" prefHeight="20.0" prefWidth="51.0" text="PAID  :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="radioBtnPaid" focusTraversable="false" layoutX="820.0" layoutY="127.0" mnemonicParsing="false" onAction="#radioBtnPaidOnAction" />
+      <JFXButton fx:id="btnUpdate" focusTraversable="false" layoutX="763.0" layoutY="169.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnUpdate" stylesheets="@../assets/styles/style.css" text="update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

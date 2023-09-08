@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancPaneReservation" prefHeight="833.0" prefWidth="1250.0" styleClass="gradient-anchorpane" stylesheets="@../assets/styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel_management_hibernate.controller.ReservationFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="427.0" layoutY="23.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.8" prefHeight="55.0" prefWidth="416.0" text="Reservation Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBack" layoutX="101.0" layoutY="771.0" onAction="#btnBackOnAction" opacity="0.8" prefHeight="36.0" prefWidth="118.0" styleClass="btnBack" stylesheets="@../assets/styles/style.css" text="Back" textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtResId" layoutX="102.0" layoutY="173.0" onKeyTyped="#txtResIdOKeytypedAction" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tableReservation" focusTraversable="false" layoutX="102.0" layoutY="374.0" onMouseClicked="#tableStudentOnMouseClicked" opacity="0.9" prefHeight="366.0" prefWidth="1066.0">
+         <columns>
+            <TableColumn fx:id="colResId" prefWidth="221.0" text="reservation id" />
+            <TableColumn fx:id="colStId" prefWidth="207.0" text="student id" />
+            <TableColumn fx:id="colRoomTypeId" prefWidth="223.0" text="room type id" />
+            <TableColumn fx:id="colDate" prefWidth="225.0" text="date" />
+            <TableColumn fx:id="colPaymentStatus" prefWidth="183.0" text="payment status" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <JFXButton fx:id="btnDelete" layoutX="1088.0" layoutY="320.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnDelete" stylesheets="@../assets/styles/style.css" text="delete">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="988.0" layoutY="320.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnUpdate" stylesheets="@../assets/styles/style.css" text="update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="884.0" layoutY="320.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnSave" stylesheets="@../assets/styles/style.css" text="save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="dpDate" editable="false" layoutX="102.0" layoutY="251.0" opacity="0.8" prefHeight="39.0" prefWidth="318.0" />
+      <ComboBox fx:id="cmbRoomTypeId" layoutX="851.0" layoutY="173.0" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <JFXButton fx:id="btnClear" layoutX="103.0" layoutY="320.0" onAction="#btnClearOnAction" opacity="0.8" prefHeight="35.0" prefWidth="80.0" styleClass="btnClear" stylesheets="@../assets/styles/style.css" text="clear">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="104.0" layoutY="153.0" prefHeight="17.0" prefWidth="140.0" text="Reservation id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="231.0" prefHeight="17.0" prefWidth="140.0" text="Payment status" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="231.0" prefHeight="17.0" prefWidth="140.0" text="Reservation date" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="854.0" layoutY="153.0" prefHeight="17.0" prefWidth="140.0" text="Room type id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="478.0" layoutY="153.0" prefHeight="17.0" prefWidth="140.0" text="Student id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbStudentId" layoutX="478.0" layoutY="173.0" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <ComboBox fx:id="cmbPaymentStatus" layoutX="476.0" layoutY="251.0" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <TextField fx:id="txtSearchByReservationId" layoutX="929.0" layoutY="78.0" onAction="#txtSearchByReservationIdOnAction" opacity="0.8" prefHeight="39.0" prefWidth="240.0" promptText="Search Reservation Id" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="imgSearch" fitHeight="26.0" fitWidth="26.0" layoutX="1128.0" layoutY="85.0" onMouseClicked="#imgSearchOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/searchIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

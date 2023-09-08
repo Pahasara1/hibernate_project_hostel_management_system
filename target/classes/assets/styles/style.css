@@ -1,0 +1,124 @@
+/* styles.css */
+.gradient-anchorpane {
+    -fx-background-color: linear-gradient(to left, #000000, #00002a);
+}
+
+.loginBtn{
+    /*-fx-background-color: linear-gradient(to top right  , #1C82AD, #86E5FF);*/
+    /*-fx-background-color: linear-gradient(to top right  ,#000000 ,#FFFFFF);*/
+    -fx-background-color: linear-gradient(to top right  ,#999999 ,#000000);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 0, 0, 0, 0);
+    -fx-background-radius: 20px;
+    -fx-text-fill: #FFFFFF;
+}
+.loginBtn:hover{
+    /*-fx-background-color: linear-gradient(to top right  , #1C82AD, #86E5FF);*/
+    /*-fx-background-color: linear-gradient(to top right  ,#000000 ,#FFFFFF);*/
+    -fx-background-color: linear-gradient(to top right  ,#333333, #000000);
+    -fx-background-radius: 20px;
+    -fx-text-fill: #FFFFFF;
+}
+.txtUsername{
+    -fx-background-radius: 8px;
+    /*-fx-background-color: D9D9D9;*/
+    -fx-font-weight: bold;
+}
+
+.txtPassword{
+    -fx-background-radius: 8px;
+    /*-fx-background-color: D9D9D9;*/
+    /*-fx-font-weight: bold;*/
+}
+
+.lbl-forgot-pass:hover{
+    -fx-text-fill: #1d85f3;
+}
+
+.btn{
+    -fx-background-color: #ebebeb;
+    -fx-background-radius: 5;
+}
+
+.btn:hover {
+    -fx-font-size: 18;
+    -fx-font-family: "Eras Bold ITC";
+}
+
+.btnSave{
+    -fx-background-color: linear-gradient(to right, #66b366, #b3d9b3);
+    -fx-background-radius: 10;
+}
+.btnSave:hover{
+    -fx-background-color: linear-gradient(to right, #4da64d, #66b366);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+.btnUpdate{
+    -fx-background-color: linear-gradient(to right, #6fa2d9, #b3b3ff);
+    -fx-background-radius: 10;
+}
+.btnUpdate:hover{
+    -fx-background-color: linear-gradient(to right, #3195fd, #6fa2d9);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+.btnDelete{
+    -fx-background-color: linear-gradient(to right, #ff6666, #ffb3b3);
+    -fx-background-radius: 10;
+}
+.btnDelete:hover{
+    -fx-background-color: linear-gradient(to right, #ff4d4d, #ff6666);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+.btnClear{
+    -fx-background-color: linear-gradient(to right, #666666, #b3b3b3);
+    -fx-background-radius: 10;
+}
+.btnClear:hover{
+    -fx-background-color: linear-gradient(to right, #4d4d4d, #666666);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+.btnBack{
+    -fx-background-color: linear-gradient(to right, #1a1a1a, #808080);
+    -fx-text-fill: #eeeeee;
+    -fx-background-radius: 10;
+}
+.btnBack:hover{
+    -fx-background-color: linear-gradient(to right, #000000, #1a1a1a);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+.btnMain{
+    -fx-background-color: linear-gradient(to right, #c0c0c0, #e6e6e6);
+    -fx-background-radius: 10;
+}
+.btnMain:hover{
+    -fx-background-color: linear-gradient(to right, #000000, #808080);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+
+.settings-icon:hover{
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+.submitbtn{
+    -fx-background-color: #a4a4a4;
+    -fx-background-radius: 10;
+}
+
+.submitbtn:hover{
+    -fx-background-color: linear-gradient(to right, #3195fd, #6fa2d9);
+    /*#3195fd;*/
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}

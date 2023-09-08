@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancPaneRoomForm" prefHeight="833.0" prefWidth="1250.0" styleClass="gradient-anchorpane" stylesheets="@../assets/styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel_management_hibernate.controller.RoomFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="445.0" layoutY="21.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.8" prefHeight="55.0" prefWidth="376.0" text="Room Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBack" layoutX="101.0" layoutY="771.0" onAction="#btnBackOnAction" opacity="0.8" prefHeight="36.0" prefWidth="118.0" styleClass="btnBack" stylesheets="@../assets/styles/style.css" text="Back">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtId" layoutX="100.0" layoutY="131.0" onKeyTyped="#txtIdOnKeyTypedAction" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtType" layoutX="476.0" layoutY="131.0" onKeyTyped="#txtTypeOnKeyTypedAction" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtKeyMoney" layoutX="849.0" layoutY="131.0" onKeyTyped="#txtKeyMoneyOnKeyTypedAction" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtRoomQty" layoutX="100.0" layoutY="211.0" onKeyTyped="#txtRoomQtyOnKeyTypedAction" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tableRoom" focusTraversable="false" layoutX="102.0" layoutY="374.0" onMouseClicked="#tableStudentOnMouseClicked" opacity="0.9" prefHeight="355.0" prefWidth="1066.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="148.0" text="room type id" />
+            <TableColumn fx:id="colType" prefWidth="315.0" text="room type" />
+            <TableColumn fx:id="colPersonsQty" prefWidth="176.0" text="no.of persons per room" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="264.0" text="key money" />
+            <TableColumn fx:id="colRoomQty" prefWidth="158.0" text="no. of rooms" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <JFXButton fx:id="btnDelete" layoutX="1086.0" layoutY="287.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnDelete" stylesheets="@../assets/styles/style.css" text="delete">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="986.0" layoutY="287.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnUpdate" stylesheets="@../assets/styles/style.css" text="update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="882.0" layoutY="287.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="80.0" styleClass="btnSave" stylesheets="@../assets/styles/style.css" text="save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="101.0" layoutY="287.0" onAction="#btnClearOnAction" opacity="0.8" prefHeight="35.0" prefWidth="80.0" styleClass="btnClear" stylesheets="@../assets/styles/style.css" text="clear">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtPersonQty" layoutX="476.0" layoutY="211.0" onKeyTyped="#txtPersonQtyOnKeyTypedAction" opacity="0.8" prefHeight="39.0" prefWidth="318.0" style="-fx-background-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="102.0" layoutY="111.0" prefHeight="17.0" prefWidth="140.0" text="Room type id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="111.0" prefHeight="17.0" prefWidth="140.0" text="Room type" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="849.0" layoutY="111.0" prefHeight="17.0" prefWidth="140.0" text="Key money" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="191.0" prefHeight="17.0" prefWidth="140.0" text="Total no. of rooms" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="191.0" prefHeight="20.0" prefWidth="184.0" text="No. of persons per room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
